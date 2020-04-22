@@ -43,6 +43,8 @@ class CreateProject extends Component {
   }
 }
 
+// Instead of calling props.dispatch(() => createProject()),
+// you may call props.createProject() directly.
 const mapDispatchToProps = (dispatch) => {
   return {
     createProject: (project) => dispatch(createProject(project)),
