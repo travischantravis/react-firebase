@@ -28,7 +28,7 @@ class Dashboard extends Component {
 // state is the state of the Redux store
 const mapStateToProps = (state) => {
   // state returns all the reducers binded in rootReducer
-  console.log(state);
+  // console.log(state);
   return {
     // sync from firestore to component
     projects: state.firestore.ordered.projects,
