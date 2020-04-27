@@ -26,10 +26,19 @@ const store = createStore(
   )
 );
 
+// Vid 29 comments
+const profileSpecificProps = {
+  userProfile: "users",
+  useFirestoreForProfile: true,
+  enableRedirectHandling: false,
+  resetBeforeLogin: false,
+};
+
 // Vid 18 comments
 const rrfProps = {
   firebase,
   config: fbConfig,
+  config: profileSpecificProps,
   dispatch: store.dispatch,
   createFirestoreInstance,
 };
