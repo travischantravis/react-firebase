@@ -15,8 +15,10 @@ class CreateProject extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    //console.log(this.state);
     this.props.createProject(this.state);
+
+    // Redirect to home page after clicking Create Project
+    this.props.history.push("/");
   };
   render() {
     const { auth } = this.props;
