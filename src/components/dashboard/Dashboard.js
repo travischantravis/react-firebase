@@ -45,7 +45,7 @@ export default compose(
   // when this component is active, the collection I want to listen to is called 'projects' and 'notifications'
   // when data in the collection is changed, the firestore reducer is induced to sync the store state with firestore
   firestoreConnect([
-    { collection: "projects" },
-    { collection: "notifications", limit: 3 },
+    { collection: "projects", orderBy: ["createdAt", "desc"] },
+    { collection: "notifications", limit: 5, orderBy: ["time", "desc"] },
   ])
 )(Dashboard);
